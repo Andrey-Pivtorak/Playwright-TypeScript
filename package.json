@@ -1,0 +1,28 @@
+{
+  "name": "playwright_TypeScript",
+  "version": "1.0.0",
+  "description": "The template for using playwright for integration testing",
+  "keywords": "playwright, typescript",
+  "author": "Andrii Pivtorak",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.37.1"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "test:parallel": "npx playwright test --workers 1",
+    "test:one": "npx playwright test tests/example.spec.ts --project=chromium --headed",
+    "test:one:debug": "npx playwright test tests/example.spec.ts --debug --project=chromium",
+    "test:one:debug:line": "npx playwright test folder/name.spec.ts:9 --debug",
+    "test:several": "npx playwright test folder/name1.spec.ts folder/name2.spec.ts",
+    "test:particular:name": "npx playwright test (part of file name)",
+    "test:particular:title": "npx playwright test -g \"(part of a title of a test)\"",
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:chrome:headed": "npx playwright test --project=chromium --headed",
+    "test:chrome:debug": "npx playwright test --project=chromium --debug",
+    "codegen": "npx playwright codegen",
+    "report": "npx playwright show-report"
+
+
+  }
+}
