@@ -6,7 +6,9 @@
   "author": "Andrii Pivtorak",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.37.1"
+    "@playwright/test": "^1.37.1",
+    "allure-commandline": "^2.24.0",
+    "allure-playwright": "2.7.0"
   },
   "scripts": {
     "test": "npx playwright test",
@@ -21,8 +23,7 @@
     "test:chrome:headed": "npx playwright test --project=chromium --headed",
     "test:chrome:debug": "npx playwright test --project=chromium --debug",
     "codegen": "npx playwright codegen",
-    "report": "npx playwright show-report"
-
-
+    "html:report": "npx playwright show-report",
+    "allure:report": "npx allure generate ./allure-results --clean && allure open"
   }
 }

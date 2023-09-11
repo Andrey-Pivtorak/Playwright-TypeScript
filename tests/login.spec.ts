@@ -6,7 +6,7 @@ test('test', async ({ page }) => {
   const login = new LoginPage(page);
 
   await login.gotoLoginPage();
-  await login.login('tomsmith', 'SuperSecretPassword!');
+  await login.login('tomsmith2', 'SuperSecretPassword!');
   await page.waitForTimeout(3000); //use only for debugging!
 
   // await page.goto('https://the-internet.herokuapp.com/login');
